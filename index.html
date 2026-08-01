@@ -3,55 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Banyeli Studio — your AI-powered operating system for content and growth." />
     <title>Banyeli Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <aside class="sidebar" aria-label="Banyeli Studio navigation">
-        <a class="brand" href="#dashboard"><span class="brand-mark">b</span><span>banyeli<br /><strong>studio</strong></span></a>
-        <div class="workspace-switch"><span class="workspace-dot"></span><span>My workspace</span><button aria-label="Switch workspace">⌄</button></div>
-        <nav class="side-nav">
-          <p class="nav-label">Workspace</p>
-          <a class="active" href="#dashboard"><span>⌘</span> Command center</a>
-          <a href="#projects"><span>◫</span> Projects</a>
-          <a href="#content"><span>✦</span> Content engine</a>
-          <p class="nav-label">Intelligence</p>
-          <a href="#vault"><span>▣</span> The Vault <i>New</i></a>
-          <a href="#knowledge"><span>◎</span> Knowledge base</a>
-          <a href="#automations"><span>↗</span> Automations</a>
-          <a href="#analytics"><span>◌</span> Analytics</a>
-        </nav>
-        <div class="sidebar-bottom"><a href="#settings"><span>⚙</span> Settings</a><a href="#help"><span>?</span> Help &amp; support</a><div class="profile"><span class="avatar">B</span><span><strong>Brandon</strong><small>Studio owner</small></span><button aria-label="Open profile menu">•••</button></div></div>
-      </aside>
-
-      <main id="dashboard" class="main-panel">
-        <div class="galaxy-scene" aria-hidden="true"><i class="star star-a"></i><i class="star star-b"></i><i class="star star-c"></i><i class="nebula nebula-a"></i><i class="nebula nebula-b"></i></div>
-        <header class="topbar"><button class="mobile-menu" aria-label="Open navigation">☰</button><p><span class="live-dot"></span> Banyeli Chief of Staff is online</p><div><button class="icon-button" aria-label="Notifications">♧<i></i></button><button class="new-button">+ New project</button></div></header>
-        <section class="command-stage">
-          <article class="chief-presence">
-            <div class="presence-top"><span><i></i> Live presence</span><button class="voice-toggle" type="button">Enable voice</button></div>
-            <video class="chief-video" poster="" autoplay muted loop playsinline aria-label="Banyeli Chief of Staff avatar"><source src="assets/banyeli-chief-of-staff.mp4" type="video/mp4" /></video>
-            <div class="presence-shade"></div>
-            <div class="presence-copy"><p>Chief of Staff</p><h2>Meet <em>Banyeli.</em></h2><span>Here to think with you, not just answer you.</span></div>
-            <div class="presence-orbit orbit-one"></div><div class="presence-orbit orbit-two"></div>
-          </article>
-          <div class="welcome"><div><p class="eyebrow">Friday, August 1 · Studio transmission</p><h1>Good morning,<br /><em>Brandon.</em></h1><p class="subhead">Your world is in motion. Banyeli has prepared your brief and is ready to build alongside you.</p></div><div class="chief-card"><div class="chief-head"><span class="chief-orb">✦</span><div><small>Banyeli is listening</small><strong>What are we moving forward today?</strong></div></div><form class="prompt-button chief-form"><label class="sr-only" for="chief-input">Message Banyeli</label><input id="chief-input" placeholder="Talk to Banyeli…" /><button type="submit" aria-label="Send message">↑</button></form><p class="chief-response" aria-live="polite">Start with a thought, a problem, or a next move.</p></div></div>
-        </section>
-
-        <section class="signal-row" aria-label="Studio signals"><article><p>Active projects</p><strong>03</strong><span class="up">↑ 1 this week</span></article><article><p>Ideas in the Vault</p><strong>28</strong><span>Ready when you are</span></article><article><p>Content momentum</p><strong>82<span>%</span></strong><span class="up">↑ 12% this month</span></article><article class="focus-card"><p>Focus for today</p><strong>Build the foundation.</strong><span>2 of 6 steps complete</span></article></section>
-
-        <section class="dashboard-grid"><div class="section-block roadmap"><div class="section-heading"><div><p class="eyebrow">Your build roadmap</p><h2>Build the Studio <em>right.</em></h2></div><button class="text-button">View full roadmap <span>→</span></button></div><div class="roadmap-list"><article class="roadmap-item current"><div class="step-number">01</div><div><small>Current focus</small><h3>Foundation</h3><p>Define how Banyeli Studio works: web application, AI Chief of Staff, and the connection between them.</p></div><button class="continue-button">Continue <span>→</span></button></article><article class="roadmap-item"><div class="step-number">02</div><div><h3>Operating System</h3><p>Your strategy, priorities, cadence, and core workflows.</p></div><span class="locked">Next</span></article><article class="roadmap-item"><div class="step-number">03</div><div><h3>Knowledge Base</h3><p>Brand context, offers, audience, voice, and reference material.</p></div><span class="locked">Later</span></article></div></div>
-          <aside class="section-block next-actions"><div class="section-heading"><div><p class="eyebrow">Chief of Staff brief</p><h2>Next <em>moves.</em></h2></div></div><ol><li><span>1</span><div><strong>Choose the product model</strong><p>Confirm the app + AI structure.</p></div><button aria-label="Open product model">→</button></li><li><span>2</span><div><strong>Map your operating system</strong><p>Set the engine before the outputs.</p></div><button aria-label="Open operating system">→</button></li><li><span>3</span><div><strong>Start your knowledge base</strong><p>Give the Studio its context.</p></div><button aria-label="Open knowledge base">→</button></li></ol><button class="primary-action">Start with Foundation <span>→</span></button></aside>
-        </section>
-
-        <section id="vault" class="vault-preview"><div><p class="eyebrow">The Vault</p><h2>Every good idea,<br /><em>kept close.</em></h2><p>A private place for sparks, references, campaign angles, and the things you do not want to lose.</p><a href="#vault">Open the Vault <span>↗</span></a></div><div class="vault-stack"><article class="note note-one"><small>CAMPAIGN THOUGHT</small><p>What if the hook is not urgency, but recognition?</p><span>Today</span></article><article class="note note-two"><small>SAVED REFERENCE</small><p>Make the ordinary feel like an event.</p><span>Visual direction</span></article><div class="vault-glow"></div></div></section>
-      </main>
-    </div>
+    <main class="world">
+      <div class="cosmos" aria-hidden="true"><i class="star s1"></i><i class="star s2"></i><i class="star s3"></i><i class="star s4"></i><i class="mist mist-a"></i><i class="mist mist-b"></i></div>
+      <nav class="rail" aria-label="Banyeli"><a class="mark" href="#home" aria-label="Banyeli">b</a><span></span><a href="#vault" aria-label="Private vault">◇</a></nav>
+      <header><span class="live"><i></i> private line</span><button class="sound" type="button">sound off</button></header>
+      <section id="home" class="arrival">
+        <article class="presence"><video class="chief-video" autoplay muted loop playsinline aria-label="Banyeli"><source src="assets/banyeli-chief-of-staff.mp4" type="video/mp4" /></video><div class="video-fade"></div><div class="presence-label"><span>01</span><p>Banyeli<br />with you</p></div></article>
+        <div class="space">
+          <p class="whisper">You made it.</p>
+          <h1>Begin<br /><em>anywhere.</em></h1>
+          <form class="thought-form"><label class="sr-only" for="thought">Speak with Banyeli</label><input id="thought" autocomplete="off" placeholder="What is on your mind?" /><button type="submit" aria-label="Send">↑</button></form>
+          <p class="reply" aria-live="polite">She is listening.</p>
+          <p class="corner-note">Just for you.</p>
+        </div>
+      </section>
+      <section id="vault" class="below"><p>Keep a thought<br /><em>close.</em></p><span>↓</span></section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
