@@ -1,0 +1,1 @@
+export default function Library(){return <main className="shell page"><h1>Content Library</h1><p className="muted">Saved hooks and drafts will be filterable by platform, voice, campaign, status, and date.</p></main>}

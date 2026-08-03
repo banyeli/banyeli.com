@@ -1,0 +1,1 @@
+export default function Dashboard(){return <main className="shell page"><p className="eyebrow">Private host</p><h1>Begin anywhere.</h1><p className="muted">Your personal sources, campaigns, and favorite hooks will appear here after Supabase is configured.</p><a className="btn" href="/viral-hooks">Generate viral hooks</a></main>}

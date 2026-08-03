@@ -1,0 +1,2 @@
+import { describe, expect, it } from "vitest";import { hookRequestSchema } from "../lib/ai/schema";
+describe("hook request",()=>it("requires source and a platform",()=>expect(()=>hookRequestSchema.parse({source:"This reflection has enough original words to validate safely.",voice:"banyeli",objective:"Connection",audience:"People",emotions:["recognition"],platforms:["TikTok"],hookCount:3,intensity:"grounded",cta:"Reflect"})).not.toThrow()));

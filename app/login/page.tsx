@@ -1,0 +1,1 @@
+export default function Login(){return <main className="shell page"><p className="eyebrow">Private access</p><h1>Welcome back.</h1><p className="muted">Connect Supabase authentication to enable secure sign-in.</p></main>}

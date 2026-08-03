@@ -1,0 +1,2 @@
+export const BRAND_VOICES={reyna:{name:"Reyna",description:"Grounded, faith-informed, compassionate and hopeful."},nocturna:{name:"Nocturna",description:"Cinematic, symbolic, dark but never hopeless."},banyeli:{name:"Banyeli",description:"Raw, personal, vulnerable and conversational."},my_chapter_called_sin:{name:"My Chapter Called SIN",description:"Testimony-driven, inclusive, purposeful and hopeful."}} as const;
+export type BrandVoiceKey=keyof typeof BRAND_VOICES;

@@ -1,0 +1,1 @@
+export default function Vault(){return <main className="shell page"><h1>The Vault</h1><p className="muted">Original material lives here. Search, tags, soft deletion, restoration, and exports activate with the supplied Supabase migration.</p></main>}
