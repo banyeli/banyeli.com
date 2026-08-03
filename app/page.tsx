@@ -1,2 +1,5 @@
-import Link from "next/link";
-export default function Home(){return <main className="shell page"><p className="eyebrow">Private creative operating system</p><h1 style={{font:"500 clamp(58px,11vw,150px)/.8 Georgia,serif",margin:"24px 0"}}>Banyeli<br/><i>OS</i></h1><p className="muted" style={{maxWidth:430}}>A private place to turn what is true into what comes next.</p><Link className="btn" href="/login">Enter privately</Link></main>}
+import { redirect } from "next/navigation";
+
+export default function Home() {
+  redirect("/dashboard");
+}

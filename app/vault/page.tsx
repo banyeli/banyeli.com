@@ -85,7 +85,7 @@ export default function Vault() {
   }, [entries, query]);
 
   return <main className="vault-page">
-    <nav className="vault-nav"><Link href="/dashboard">banyeli</Link><span>Your private Vault</span><Link href="/dashboard">Dashboard</Link></nav>
+    <nav className="vault-nav"><Link href="/dashboard">Banyeli</Link><span>Your private Vault</span><Link href="/dashboard">Dashboard</Link></nav>
     <section className="vault-intro"><p className="eyebrow">Private source memory</p><h1>Keep what<br /><i>matters.</i></h1><p>Writing stays yours. Banyeli only uses what you choose to bring into a creation.</p></section>
     <section className="vault-layout">
       <form className="vault-compose" onSubmit={addWriting}>

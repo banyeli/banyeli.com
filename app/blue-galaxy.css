@@ -7,3 +7,9 @@
 
 body{background:#070e19}.shell{background:radial-gradient(ellipse at 80% 14%,#2c1c54 0%,transparent 31%),radial-gradient(ellipse at 18% 76%,#164653 0%,transparent 38%),linear-gradient(130deg,#070e19 0%,#090f1e 43%,#100c22 100%)}.vault-page{background:radial-gradient(ellipse at 80% 14%,#2c1c54 0%,transparent 31%),radial-gradient(ellipse at 18% 76%,#164653 0%,transparent 38%),linear-gradient(130deg,#070e19 0%,#090f1e 43%,#100c22 100%)}
 .global-banyeli{position:fixed;z-index:20;right:26px;bottom:26px;width:144px;height:205px;overflow:hidden;border:1px solid rgba(199,221,255,.45);background:#0a1020;box-shadow:0 18px 60px rgba(4,8,22,.48)}.global-banyeli video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.global-banyeli-fade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 43%,rgba(4,9,20,.92))}.global-banyeli-label{position:absolute;z-index:1;bottom:14px;left:14px;display:grid;gap:3px;color:#eff8ef}.global-banyeli-label span{color:var(--accent);font:9px monospace;letter-spacing:.09em;text-transform:uppercase}.global-banyeli-label b{font:17px Georgia,serif;font-weight:500}@media(max-width:700px){.global-banyeli{right:14px;bottom:14px;width:96px;height:138px}.global-banyeli-label{bottom:10px;left:10px}.global-banyeli-label span{font-size:7px}.global-banyeli-label b{font-size:14px}}
+
+/* Banyeli is always one third of the main visual field. */
+.banyeli-arrival{grid-template-columns:minmax(290px,1fr) 2fr}
+.ask-stage{grid-template-columns:minmax(280px,1fr) 2fr}
+.banyeli-dashboard-header{justify-content:flex-end}
+@media(max-width:760px){.ask-stage{grid-template-columns:1fr}}

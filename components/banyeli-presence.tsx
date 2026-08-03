@@ -12,6 +12,6 @@ export function BanyeliPresence() {
       <source src="/banyeli-chief-of-staff.mp4" type="video/mp4" />
     </video>
     <div className="global-banyeli-fade" />
-    <Link href="/ask" className="global-banyeli-label"><span>private line</span><b>Banyeli</b></Link>
+    <Link href="/ask" className="global-banyeli-label"><b>Banyeli</b></Link>
   </aside>;
 }
