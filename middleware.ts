@@ -4,7 +4,7 @@ import { NextResponse, type NextRequest } from "next/server";
 const allowedEmails = () => new Set((process.env.PRIVATE_ALLOWED_EMAILS || "").split(",").map((email) => email.trim().toLowerCase()).filter(Boolean));
 
 export async function middleware(request: NextRequest) {
-  const response = NextResponse.next({ request }); const url = process.env.NEXT_PUBLIC_SUPABASE_URL; const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const response = NextResponse.next({ request }); const url = process.env.NEXT_PUBLIC_SUPABASE_URL; const key = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   if (!url || !key) return NextResponse.redirect(new URL("/login?error=missing_configuration", request.url));
   const supabase = createServerClient(url, key, { cookies: { getAll: () => request.cookies.getAll(), setAll: (cookies: Array<{ name: string; value: string; options?: Record<string, unknown> }>) => cookies.forEach(({ name, value, options }) => response.cookies.set(name, value, options as never)) } });
   const { data: { user } } = await supabase.auth.getUser();
