@@ -34,7 +34,6 @@ export default function Dashboard() {
 
         <div className="banyeli-space">
           <p className="banyeli-whisper">You made it.</p>
-          <h1>Begin<br /><em>anywhere.</em></h1>
           <p className="banyeli-prompt">What is on your mind?</p>
           <div className="banyeli-choices">
             <Link href="/ask">Ask Banyeli <span>↗</span></Link>
