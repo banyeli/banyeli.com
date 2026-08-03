@@ -1,0 +1,6 @@
+/* Restore Banyeli's original blue galaxy world while retaining her lime signal. */
+.banyeli-world{background:radial-gradient(ellipse at 80% 14%,#2c1c54 0%,transparent 31%),radial-gradient(ellipse at 18% 76%,#164653 0%,transparent 38%),linear-gradient(130deg,#070e19 0%,#090f1e 43%,#100c22 100%)}
+.banyeli-cosmos:before,.banyeli-cosmos:after{background:#fff;box-shadow:55px 40px #fff,156px 119px #a7ddeb,281px 46px #fff,401px 169px #d5c7ff,555px 78px #fff,714px 122px #a7ddeb,891px 50px #fff,1030px 191px #d5c7ff,1180px 95px #fff,1320px 270px #a7ddeb,110px 410px #fff,330px 520px #d5c7ff,550px 412px #fff,770px 560px #a7ddeb,1000px 440px #fff,1240px 610px #d5c7ff}
+.banyeli-star{background:#f8ffff;box-shadow:0 0 12px 3px #c6ecff}.banyeli-mist-pink{background:#d66bc4}.banyeli-mist-teal{background:#4ed5c7}
+.ask-page{background:radial-gradient(ellipse at 86% 16%,#2c1c54 0%,transparent 34%),radial-gradient(ellipse at 8% 90%,#164653 0%,transparent 38%),linear-gradient(135deg,#070e19,#100c22)}
+.ask-presence.is-speaking:after{border-color:#a7ddeb}@keyframes banyeli-pulse{50%{inset:-3px;box-shadow:0 0 32px 7px #a7ddeb66}}

@@ -38,6 +38,7 @@ export default function Dashboard() {
           <p className="banyeli-prompt">What is on your mind?</p>
           <div className="banyeli-choices">
             <Link href="/ask">Ask Banyeli <span>↗</span></Link>
+            <Link href="/content-engine/viral-content">Create everywhere <span>↗</span></Link>
             <Link href="/viral-hooks">Find the hook <span>↗</span></Link>
             <Link href="/vault">Open the vault <span>↗</span></Link>
           </div>
