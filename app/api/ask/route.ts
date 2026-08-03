@@ -7,8 +7,9 @@ const requestSchema = z.object({ message: z.string().trim().min(1).max(5000) });
 export async function POST(request: Request) {
   try {
     const { message } = requestSchema.parse(await request.json());
-    if (!process.env.OPENAI_API_KEY) return NextResponse.json({ error: "Banyeli's AI key is not connected yet." }, { status: 503 });
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const apiKey = process.env.OPENAI_API_KEY || process.env.Openai_api_key;
+    if (!apiKey) return NextResponse.json({ error: "Banyeli's AI key is not connected yet." }, { status: 503 });
+    const client = new OpenAI({ apiKey });
     const response = await client.chat.completions.create({
       model: process.env.OPENAI_MODEL || "gpt-5.6-sol",
       messages: [
