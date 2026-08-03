@@ -13,13 +13,10 @@ export default function Dashboard() {
       </div>
 
       <nav className="banyeli-rail" aria-label="Banyeli">
-        <Link className="banyeli-mark" href="/dashboard" aria-label="Banyeli dashboard">b</Link>
-        <span />
         <Link href="/vault" aria-label="Private vault">◇</Link>
       </nav>
 
       <header className="banyeli-dashboard-header">
-        <span className="banyeli-private-line"><i /> private line</span>
         <Link href="/settings" className="banyeli-settings-link">settings</Link>
       </header>
 
@@ -29,11 +26,9 @@ export default function Dashboard() {
             <source src="/banyeli-chief-of-staff.mp4" type="video/mp4" />
           </video>
           <div className="banyeli-video-fade" />
-          <div className="banyeli-presence-label"><span>01</span></div>
         </article>
 
         <div className="banyeli-space">
-          <p className="banyeli-whisper">You made it.</p>
           <p className="banyeli-prompt">What is on your mind?</p>
           <div className="banyeli-choices">
             <Link href="/ask">Ask Banyeli <span>↗</span></Link>
@@ -41,7 +36,6 @@ export default function Dashboard() {
             <Link href="/viral-hooks">Find the hook <span>↗</span></Link>
             <Link href="/vault">Open the vault <span>↗</span></Link>
           </div>
-          <p className="banyeli-corner-note">Just for you.</p>
         </div>
       </section>
     </main>
