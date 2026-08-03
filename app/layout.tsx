@@ -1,5 +1,6 @@
 import "./globals.css";
 import "./blue-galaxy.css";
 import type { Metadata } from "next";
+import { BanyeliPresence } from "@/components/banyeli-presence";
 export const metadata: Metadata = { title: "Banyeli OS", description: "Private creative operating system" };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body>{children}</body></html>; }
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en"><body>{children}<BanyeliPresence /></body></html>; }
