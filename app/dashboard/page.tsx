@@ -29,7 +29,7 @@ export default function Dashboard() {
             <source src="/banyeli-chief-of-staff.mp4" type="video/mp4" />
           </video>
           <div className="banyeli-video-fade" />
-          <div className="banyeli-presence-label"><span>01</span><p>Banyeli<br />with you</p></div>
+          <div className="banyeli-presence-label"><span>01</span></div>
         </article>
 
         <div className="banyeli-space">

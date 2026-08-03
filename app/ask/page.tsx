@@ -48,7 +48,7 @@ export default function AskPage() {
       <aside className={`ask-presence ${speaking !== null ? "is-speaking" : ""}`}>
         <video autoPlay muted loop playsInline aria-label="Banyeli"><source src="/banyeli-chief-of-staff.mp4" type="video/mp4" /></video>
         <div className="ask-video-fade" />
-        <div className="ask-presence-label"><span>{speaking !== null ? "speaking" : "private line"}</span><p>Banyeli<br />with you</p></div>
+        <div className="ask-presence-label"><span>{speaking !== null ? "speaking" : "private line"}</span></div>
       </aside>
       <div className="ask-conversation"><header><p className="eyebrow">Private line</p><h1>Ask<br /><i>Banyeli.</i></h1><p className="voice-ready">Her voice is ready.</p></header><div className="ask-thread" aria-live="polite">{messages.map((message, index) => <article className={`ask-message ${message.role}`} key={index}><span>{message.role === "you" ? "You" : "Banyeli"}</span><p>{message.text}</p>{message.role === "banyeli" ? <button type="button" className="hear-banyeli" onClick={() => hearBanyeli(message.text, index)} disabled={speaking !== null}>{speaking === index ? "Speaking…" : "Hear Banyeli"}</button> : null}</article>)}{sending ? <p className="ask-listening">Listening…</p> : null}</div><form className="ask-form" onSubmit={ask}><textarea value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="Say what is on your mind…" aria-label="Ask Banyeli" rows={2} /><button type="submit" disabled={sending || !draft.trim()} aria-label="Send message">↑</button></form></div>
     </section>
