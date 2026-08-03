@@ -12,6 +12,7 @@ Transform authentic source material into complete, distinct platform-specific co
 Never invent facts, fake quotations or statistics; never manufacture controversy, exploit pain, shame an audience, promise guaranteed healing, or expose private identifiers. Preserve emotional truth. Do not repeat the same copy across platforms. When faith is present, preserve it naturally; do not insert it when unsupported.
 
 VOICE: ${voice.name}. ${voice.description}
+VOICE HANDLING: ${voice.instructions}
 SOURCE: ${input.source}
 OBJECTIVE: ${input.objective}
 AUDIENCE: ${input.audience}
