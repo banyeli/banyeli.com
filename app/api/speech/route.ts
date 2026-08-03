@@ -15,7 +15,12 @@ export async function POST(request: Request) {
       headers: { "xi-api-key": apiKey, "content-type": "application/json", accept: "audio/mpeg" },
       body: JSON.stringify({ text, model_id: "eleven_flash_v2_5", voice_settings: { stability: 0.55, similarity_boost: 0.75, style: 0.2, use_speaker_boost: true } }),
     });
-    if (!response.ok) return NextResponse.json({ error: "Banyeli's voice could not play right now." }, { status: response.status });
+    if (!response.ok) {
+      const error = response.status === 402
+        ? "Banyeli’s voice needs ElevenLabs credit before she can speak."
+        : "Banyeli's voice could not play right now.";
+      return NextResponse.json({ error }, { status: response.status });
+    }
     return new NextResponse(response.body, { headers: { "content-type": "audio/mpeg", "cache-control": "no-store" } });
   } catch (error) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "Banyeli's voice could not play right now." }, { status: 400 });

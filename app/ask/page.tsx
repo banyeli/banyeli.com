@@ -10,6 +10,7 @@ export default function AskPage() {
   const [draft, setDraft] = useState("");
   const [sending, setSending] = useState(false);
   const [speaking, setSpeaking] = useState<number | null>(null);
+  const [voiceError, setVoiceError] = useState("");
 
   async function ask(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -28,16 +29,19 @@ export default function AskPage() {
 
   async function hearBanyeli(text: string, index: number) {
     if (speaking !== null) return;
+    setVoiceError("");
     setSpeaking(index);
     try {
       const response = await fetch("/api/speech", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text }) });
-      if (!response.ok) throw new Error("Banyeli's voice could not play right now.");
+      const result = response.ok ? null : await response.json();
+      if (!response.ok) throw new Error(result.error || "Banyeli's voice could not play right now.");
       const audioUrl = URL.createObjectURL(await response.blob());
       const audio = new Audio(audioUrl);
       audio.onended = () => { URL.revokeObjectURL(audioUrl); setSpeaking(null); };
       audio.onerror = () => { URL.revokeObjectURL(audioUrl); setSpeaking(null); };
       await audio.play();
-    } catch {
+    } catch (error) {
+      setVoiceError(error instanceof Error ? error.message : "Banyeli's voice could not play right now.");
       setSpeaking(null);
     }
   }
@@ -49,7 +53,7 @@ export default function AskPage() {
         <video autoPlay muted loop playsInline aria-label="Banyeli"><source src="/banyeli-chief-of-staff.mp4" type="video/mp4" /></video>
         <div className="ask-video-fade" />
       </aside>
-      <div className="ask-conversation"><div className="ask-thread" aria-live="polite">{messages.map((message, index) => <article className={`ask-message ${message.role}`} key={index}><span>{message.role === "you" ? "You" : "Banyeli"}</span><p>{message.text}</p>{message.role === "banyeli" ? <button type="button" className="hear-banyeli" onClick={() => hearBanyeli(message.text, index)} disabled={speaking !== null}>{speaking === index ? "Speaking…" : "Hear Banyeli"}</button> : null}</article>)}{sending ? <p className="ask-listening">Listening…</p> : null}</div><form className="ask-form" onSubmit={ask}><textarea value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="Tell me what you’re carrying, making, or figuring out…" aria-label="Message Banyeli" rows={2} /><button type="submit" disabled={sending || !draft.trim()} aria-label="Send message">↑</button></form></div>
+      <div className="ask-conversation"><div className="ask-thread" aria-live="polite">{messages.map((message, index) => <article className={`ask-message ${message.role}`} key={index}><p>{message.text}</p>{message.role === "banyeli" ? <button type="button" className="hear-banyeli" onClick={() => hearBanyeli(message.text, index)} disabled={speaking !== null}>{speaking === index ? "Speaking…" : "Hear Banyeli"}</button> : null}</article>)}{sending ? <p className="ask-listening">Listening…</p> : null}</div>{voiceError ? <p className="voice-error" role="alert">{voiceError}</p> : null}<form className="ask-form" onSubmit={ask}><textarea value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="Tell me what you’re carrying, making, or figuring out…" aria-label="Message Banyeli" rows={2} /><button type="submit" disabled={sending || !draft.trim()} aria-label="Send message">↑</button></form></div>
     </section>
   </main>;
 }
