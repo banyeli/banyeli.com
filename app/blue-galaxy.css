@@ -14,3 +14,13 @@ body{background:#070e19}.shell{background:radial-gradient(ellipse at 80% 14%,#2c
 .banyeli-dashboard-header{justify-content:flex-end}
 .voice-error{margin:0 0 12px;color:#ffb2ae;font-size:12px;line-height:1.45}
 @media(max-width:760px){.ask-stage{grid-template-columns:1fr}}
+
+/* One shared, slowly moving galaxy world across every room in Banyeli. */
+:where(.shell,.vault-page,.ask-page,.banyeli-world){background-color:#070d1d;background-image:radial-gradient(ellipse at 78% 16%,rgba(88,49,159,.62) 0%,transparent 34%),radial-gradient(ellipse at 13% 76%,rgba(20,112,139,.46) 0%,transparent 39%),radial-gradient(ellipse at 56% 118%,rgba(192,63,164,.2) 0%,transparent 43%),radial-gradient(circle,rgba(232,247,255,.8) 0 1px,transparent 1.7px),linear-gradient(130deg,#070d1d 0%,#0a1027 45%,#120d29 100%);background-size:160% 150%,150% 145%,155% 155%,190px 190px,100% 100%;background-position:80% 14%,18% 76%,56% 112%,0 0,0 0;animation:banyeli-galaxy-drift 34s ease-in-out infinite alternate}
+.banyeli-cosmos:before,.banyeli-cosmos:after{animation:banyeli-star-drift 56s linear infinite alternate}.banyeli-cosmos:after{animation-duration:77s}
+@keyframes banyeli-galaxy-drift{0%{background-position:80% 14%,18% 76%,56% 112%,0 0,0 0}50%{background-position:65% 25%,28% 62%,48% 94%,45px 78px,0 0}100%{background-position:88% 8%,10% 84%,64% 105%,92px 140px,0 0}}
+@keyframes banyeli-star-drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(38px,-24px,0)}}
+@media(prefers-reduced-motion:reduce){:where(.shell,.vault-page,.ask-page,.banyeli-world),.banyeli-cosmos:before,.banyeli-cosmos:after{animation:none}}
+
+/* Additional distant galaxies so every page carries the Dashboard's depth. */
+:where(.shell,.vault-page,.ask-page,.banyeli-world){background-image:radial-gradient(ellipse at 78% 16%,rgba(88,49,159,.62) 0%,transparent 34%),radial-gradient(ellipse at 13% 76%,rgba(20,112,139,.46) 0%,transparent 39%),radial-gradient(ellipse at 56% 118%,rgba(192,63,164,.2) 0%,transparent 43%),radial-gradient(ellipse at 104% 52%,rgba(89,116,245,.28) 0%,transparent 28%),radial-gradient(ellipse at 37% -8%,rgba(125,67,178,.24) 0%,transparent 31%),radial-gradient(circle,rgba(232,247,255,.8) 0 1px,transparent 1.7px),linear-gradient(130deg,#070d1d 0%,#0a1027 45%,#120d29 100%);background-size:160% 150%,150% 145%,155% 155%,145% 140%,150% 150%,190px 190px,100% 100%;background-position:80% 14%,18% 76%,56% 112%,104% 52%,37% -8%,0 0,0 0}
