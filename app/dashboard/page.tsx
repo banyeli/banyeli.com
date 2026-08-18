@@ -35,6 +35,7 @@ export default function Dashboard() {
             <Link href="/content-engine/viral-content">Create everywhere <span>↗</span></Link>
             <Link href="/viral-hooks">Find the hook <span>↗</span></Link>
             <Link href="/vault">Open the vault <span>↗</span></Link>
+            <a href="/real-estate">Real Estate</a>
           </div>
         </div>
       </section>
