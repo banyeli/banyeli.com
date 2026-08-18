@@ -7,7 +7,7 @@ export function BanyeliPresence() {
   const pathname = usePathname();
   if (pathname === "/dashboard" || pathname === "/ask") return null;
 
-  return <aside className="global-banyeli" aria-label="Banyeli is with you">
+  return <aside className={`global-banyeli${pathname.startsWith("/real-estate") ? " real-estate-presence" : ""}`} aria-label="Banyeli is with you">
     <video autoPlay muted loop playsInline preload="metadata" aria-hidden="true">
       <source src="/banyeli-chief-of-staff.mp4" type="video/mp4" />
     </video>
