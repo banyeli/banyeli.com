@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { demoLeads, scoreBand } from "@/lib/real-estate";
 import "./real-estate.css";
+import "./blue-galaxy.css";
 const title = (value: string) => value[0].toUpperCase() + value.slice(1);
 export default function RealEstatePage() {
   const followUps = demoLeads.filter((lead) => lead.nextFollowUp === "Today").length;

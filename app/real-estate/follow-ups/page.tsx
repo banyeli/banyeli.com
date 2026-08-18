@@ -1,4 +1,5 @@
 import Link from "next/link";
 import { demoLeads } from "@/lib/real-estate";
 import "../real-estate.css";
+import "../blue-galaxy.css";
 export default function FollowUpsPage() { const due = demoLeads.filter((lead)=>lead.nextFollowUp === "Today"); return <main className="real-estate-page"><nav className="re-nav"><Link href="/dashboard">Banyeli</Link><Link href="/real-estate">Real Estate</Link><a href="/real-estate/leads">Leads</a></nav><header className="re-header"><div><p className="eyebrow">Private CRM · Demo workspace</p><h1>Follow-ups.</h1><p>Work from the people who need a respectful next step today.</p></div></header><section className="re-panel"><p className="eyebrow">Due today</p><h2>{due.length} follow-ups need attention</h2><div className="re-leads">{due.map((lead)=><article className="re-lead" key={lead.id}><div><p className="re-lead-name">{lead.name}</p><p>{lead.type} · {lead.city}</p></div><p className="re-next">Recommended: review the lead’s shared information, then choose a call, text, email, or reschedule. Nothing is automatic.</p></article>)}</div></section></main>; }
